@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daksh Shukla – Portfolio</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #0f1220, #090909);
+            color: #eaeaea;
+            font-family: "Segoe UI", system-ui, Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .topnav {
+            background: rgba(15, 15, 25, 0.85);
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-center { text-align: center; }
+
+        .topnav a {
+            text-decoration: none;
+            color: #d6d6d6;
+            margin: 0 14px;
+            font-size: 15px;
+            padding: 8px 14px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .topnav a:hover {
+            background: rgba(74,163,255,0.18);
+            color: #4aa3ff;
+            box-shadow: 0 0 12px rgba(74,163,255,0.5);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 90px 20px 60px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #4aa3ff, #ff6a6a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cfcfcf;
+            letter-spacing: 0.3px;
+        }
+
+        .card {
+            width: 85%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 18px;
+            background: linear-gradient(160deg,
+                rgba(255,255,255,0.08),
+                rgba(255,255,255,0.02)
+            );
+            border: 1px solid rgba(255,255,255,0.12);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            position: relative;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: linear-gradient(120deg, transparent, rgba(74,163,255,0.15), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover::before { opacity: 1; }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px rgba(0,0,0,0.45);
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #4aa3ff;
+            border-left: 4px solid #4aa3ff;
+            padding-left: 12px;
+        }
+
+        ul { padding-left: 22px; }
+        li { margin-bottom: 10px; }
+
+        a { color: #4aa3ff; text-decoration: none; }
+        a:hover { color: #82c2ff; }
+
+        .project {
+            padding: 18px;
+            border-radius: 14px;
+            background: rgba(0,0,0,0.45);
+            margin-bottom: 18px;
+            border-left: 5px solid #4aa3ff;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            background: rgba(20,20,35,0.8);
+            transform: translateX(6px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 0;
+            color: #aaa;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="topnav">
+        <div class="nav-center">
+            <a href="index.html">Home</a>
+            <a href="info_teacher.html">Teacher Info</a>
+            <a href="notes.html">Notes</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="https://paruluniversity844.examly.io/">IamNeo</a>
+            <a href="https://elearning.paruluniversity.ac.in/">E-Learning</a>
+            <a href="https://ums.paruluniversity.ac.in">GNUMS</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Daksh Shukla</h1>
+        <p>
+            B.Tech CSE (AI & ML) Student <br>
+            Developer • Problem Solver • Tech Enthusiast
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>About Me</h2>
+        <p>
+            I’m a Computer Science Engineering student specializing in Artificial Intelligence & Machine Learning.
+            I enjoy building clean, useful applications, dashboards, and automation tools.
+        </p>
+        <p>
+            I believe in learning by building projects and improving step by step.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Resume Objective</h2>
+        <p>
+            Motivated B.Tech CSE (AI & ML) student seeking internship opportunities to apply programming,
+            problem-solving, and machine learning fundamentals while gaining real-world experience.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>C, Python</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Data Structures & Algorithms (Basics)</li>
+            <li>Git & GitHub</li>
+            <li>VS Code, Google Colab</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Education</h2>
+        <p>
+            <strong>B.Tech – Computer Science Engineering (AI & ML)</strong><br>
+            Parul University
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Experience</h2>
+        <ul>
+            <li>Built academic and personal projects using web technologies</li>
+            <li>Practiced Python programming and automation</li>
+            <li>Explored AI/ML concepts through mini projects</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <strong>College Curriculum Dashboard</strong><br>
+            Web dashboard for notes, assignments, and resources.<br>
+            <a href="#">Coming Soon</a>
+        </div>
+
+        <div class="project">
+            <strong>Python Automation Tool</strong><br>
+            Beginner automation project using Python.<br>
+            <a href="#">Coming Soon</a>
+        </div>
+
+        <div class="project">
+            <strong>AI / ML Mini Project</strong><br>
+            Practice-based machine learning project.<br>
+            <a href="#">Coming Soon</a>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Career Goals</h2>
+        <ul>
+            <li>Secure internships in Software / AI / ML</li>
+            <li>Contribute to Open Source & GSoC</li>
+            <li>Become a skilled AI/ML Engineer</li>
+            <li>Build impactful real-world applications</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Achievements & Activities</h2>
+        <ul>
+            <li>Consistent learner in programming and AI/ML fundamentals</li>
+            <li>Building projects alongside academic coursework</li>
+            <li>Preparing for internships and technical interviews</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:sd4435979@gmail.com">sd4435979@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/daksh-shukla-5520482b8" target="_blank">Daksh Shukla</a></p>
+    </section>
+
+    <footer>
+        Built with ❤️ by Daksh Shukla
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Faculty Information</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #0f1220, #090909);
+            color: #eaeaea;
+            font-family: "Segoe UI", system-ui, Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        /* 🔵 NAVBAR — SAME AS PORTFOLIO */
+        .topnav {
+            background: rgba(15, 15, 25, 0.85);
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-center { text-align: center; }
+
+        .topnav a {
+            text-decoration: none;
+            color: #d6d6d6;
+            margin: 0 14px;
+            font-size: 15px;
+            padding: 8px 14px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .topnav a:hover {
+            background: rgba(74,163,255,0.18);
+            color: #4aa3ff;
+            box-shadow: 0 0 12px rgba(74,163,255,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin: 60px 0 10px;
+            font-size: 38px;
+            background: linear-gradient(90deg, #4aa3ff, #ff6a6a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            color: #4aa3ff;
+            margin-top: 0;
+            border-left: 4px solid #4aa3ff;
+            padding-left: 12px;
+        }
+
+        /* 🔷 CARD (GLASS STYLE) */
+        .card {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 18px;
+            background: linear-gradient(160deg,
+                rgba(255,255,255,0.08),
+                rgba(255,255,255,0.02)
+            );
+            border: 1px solid rgba(255,255,255,0.12);
+            position: relative;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(74,163,255,0.15),
+                transparent
+            );
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover::before { opacity: 1; }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px rgba(0,0,0,0.45);
+        }
+
+        /* INFO BOX */
+        .info-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 15px;
+        }
+
+        .info-item {
+            background: rgba(0,0,0,0.45);
+            padding: 18px;
+            border-radius: 14px;
+            border-left: 4px solid #4aa3ff;
+        }
+
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        thead th {
+            background: rgba(74,163,255,0.18);
+            color: #4aa3ff;
+            padding: 14px;
+            position: sticky;
+            top: 80px;
+        }
+
+        tbody td {
+            padding: 14px;
+            border-bottom: 1px solid #333;
+            text-align: center;
+        }
+
+        tbody tr:hover {
+            background: rgba(255,255,255,0.06);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 0;
+            color: #aaa;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🔵 NAVIGATION -->
+<nav class="topnav">
+    <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="info_teacher.html">Teacher Info</a>
+        <a href="notes.html">Notes</a>
+        <a href="assignments.html">Assignments</a>
+        <a href="https://paruluniversity844.examly.io/">IamNeo</a>
+        <a href="https://elearning.paruluniversity.ac.in/">E-Learning</a>
+        <a href="https://ums.paruluniversity.ac.in">GNUMS</a>
+    </div>
+</nav>
+
+<h1>Faculty Directory</h1>
+
+<!-- DEPARTMENT OVERVIEW (UNCHANGED CONTENT) -->
+<section class="card">
+    <h2>Department Overview</h2>
+    <div class="info-box">
+        <div class="info-item">
+            <strong>Department:</strong><br>
+            Computer Science Engineering (AI & ML)
+        </div>
+        <div class="info-item">
+            <strong>Semester:</strong><br>
+            First Semester
+        </div>
+        <div class="info-item">
+            <strong>Purpose:</strong><br>
+            Quick access to faculty contact & subjects
+        </div>
+        <div class="info-item">
+            <strong>University:</strong><br>
+            Parul University
+        </div>
+    </div>
+</section>
+
+<!-- ORIGINAL TABLE (UNCHANGED DATA) -->
+<section class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Subject Code</th>
+                <th>Short Name</th>
+                <th>Subject</th>
+                <th>Initials</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>MIS ID</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- ORIGINAL ROWS (NOT MODIFIED) -->
+            <tr>
+                <td>03019101BS01</td>
+                <td>Calculus</td>
+                <td>Calculus</td>
+                <td>AHZ</td>
+                <td>Ankitsinh Zala</td>
+                <td>ankitsinh.zala21443@paruluniversity.ac.in</td>
+                <td>21443</td>
+            </tr>
+
+            <tr>
+                <td>03010501ES03</td>
+                <td>FCS</td>
+                <td>Fundamentals of Computer Science</td>
+                <td>NS</td>
+                <td>Ms. Nidhi Vishal Shah</td>
+                <td>nidhi.shah19176@paruluniversity.ac.in</td>
+                <td>19176</td>
+            </tr>
+
+            <tr>
+                <td>03010501PC01 (Lecture)</td>
+                <td>WD</td>
+                <td>Web Designing</td>
+                <td>DT</td>
+                <td>Dhaval Trivedi</td>
+                <td>dhaval.trivedi37492@paruluniversity.ac.in</td>
+                <td>37492</td>
+            </tr>
+
+            <tr>
+                <td>03010501PC01 (Lab)</td>
+                <td>WD Lab</td>
+                <td>Web Designing Lab</td>
+                <td>SR</td>
+                <td>Sheekha Raina</td>
+                <td>sheekha.raina41782@paruluniversity.ac.in</td>
+                <td>41782</td>
+            </tr>
+
+            <tr>
+                <td>03019201BS01 (Lecture)</td>
+                <td>PHY</td>
+                <td>Physics for Semiconductors</td>
+                <td>SR</td>
+                <td>Dr. Swagata Roy</td>
+                <td>swagata.roy31311@paruluniversity.ac.in</td>
+                <td>31311</td>
+            </tr>
+
+            <tr>
+                <td>03019201BS01 (Lab)</td>
+                <td>PHY</td>
+                <td>Physics Lab</td>
+                <td>NP</td>
+                <td>Dr. Nikitaben Patel</td>
+                <td>nikitaben.patel40891@paruluniversity.ac.in</td>
+                <td>40891</td>
+            </tr>
+
+            <tr>
+                <td>03019201BS01 (Lab)</td>
+                <td>PHY</td>
+                <td>Physics Lab</td>
+                <td>AG</td>
+                <td>Aarti Gor</td>
+                <td>aarti.gor38345@paruluniversity.ac.in</td>
+                <td>38345</td>
+            </tr>
+
+            <tr>
+                <td>03010501ES01 (Lecture)</td>
+                <td>PPS</td>
+                <td>Programming For Problem Solving</td>
+                <td>BP</td>
+                <td>Ms. Bhagyesha Pandhi</td>
+                <td>bhagyesha.pandhi24831@paruluniversity.ac.in</td>
+                <td>24831</td>
+            </tr>
+
+            <tr>
+                <td>03010501ES01 (Lab)</td>
+                <td>PPS Lab</td>
+                <td>Programming For Problem Solving Lab</td>
+                <td>RS</td>
+                <td>Roshani Solanki</td>
+                <td>kush.bhushanwar34618@paruluniversity.ac.in</td>
+                <td>41884</td>
+            </tr>
+
+            <tr>
+                <td>03010001HM01</td>
+                <td>PCS</td>
+                <td>Principles of Communication Skills</td>
+                <td>MC</td>
+                <td>Mehul Chauhan</td>
+                <td>mehulkumar.chauhan24701@paruluniversity.ac.in</td>
+                <td>24701</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- NOTES SECTION (UNCHANGED CONTENT) -->
+<section class="card">
+    <h2>Notes</h2>
+    <ul>
+        <li>All email IDs are official Parul University emails</li>
+        <li>Use MIS ID for official academic communication</li>
+        <li>Lab faculty may vary by batch</li>
+    </ul>
+</section>
+
+<footer>
+    Built with ❤️ by Daksh Shukla
+</footer>
+
+</body>
+</html>

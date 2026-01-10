@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #0f1220, #090909);
+            color: #eaeaea;
+            font-family: "Segoe UI", system-ui, Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .topnav {
+            background: rgba(15, 15, 25, 0.85);
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-center { text-align: center; }
+
+        .topnav a {
+            text-decoration: none;
+            color: #d6d6d6;
+            margin: 0 14px;
+            font-size: 15px;
+            padding: 8px 14px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .topnav a:hover {
+            background: rgba(74,163,255,0.18);
+            color: #4aa3ff;
+            box-shadow: 0 0 12px rgba(74,163,255,0.5);
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            background: linear-gradient(90deg, #4aa3ff, #ff6a6a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sem-nav, .subject-nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .sem-nav a, .subject-nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 6px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            color: #d6d6d6;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .sem-nav a:hover,
+        .subject-nav a:hover {
+            background: rgba(74,163,255,0.25);
+            color: #4aa3ff;
+            box-shadow: 0 0 12px rgba(74,163,255,0.6);
+        }
+
+        .sem-nav a.active {
+            background: rgba(74,163,255,0.35);
+            color: white;
+            box-shadow: 0 0 14px rgba(74,163,255,0.8);
+        }
+
+        .tile {
+            width: 85%;
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 30px;
+            border-radius: 18px;
+            background: linear-gradient(160deg,
+                rgba(255,255,255,0.08),
+                rgba(255,255,255,0.02)
+            );
+            border: 1px solid rgba(255,255,255,0.12);
+            text-align: center;
+            transition: 0.35s;
+        }
+
+        .tile:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px rgba(0,0,0,0.45);
+        }
+
+        h2 {
+            color: #4aa3ff;
+            border-left: 4px solid #4aa3ff;
+            padding-left: 12px;
+            display: inline-block;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li { margin: 14px 0; }
+
+        .note-link {
+            display: inline-block;
+            padding: 12px 26px;
+            background: rgba(74,163,255,0.18);
+            border: 1px solid rgba(74,163,255,0.4);
+            border-radius: 12px;
+            color: #8ab4f8;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .note-link:hover {
+            background: rgba(74,163,255,0.35);
+            color: white;
+            box-shadow: 0 0 14px rgba(74,163,255,0.7);
+        }
+
+        marquee {
+            margin: 40px 0;
+            color: #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="topnav">
+    <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="info_teacher.html">Teacher Info</a>
+        <a href="notes.html">Notes</a>
+        <a href="assignments.html">Assignments</a>
+        <a href="https://paruluniversity844.examly.io/">IamNeo</a>
+        <a href="https://elearning.paruluniversity.ac.in/">E-Learning</a>
+        <a href="https://ums.paruluniversity.ac.in">GNUMS</a>
+    </div>
+</nav>
+
+<header>
+    <h1>Notes of Subjects</h1>
+</header>
+
+<main>
+
+<div id="sem1">
+
+<section class="tile" id="WD">
+<h2>Web Designing</h2>
+<ul>
+<li><a class="note-link" href="assets/PDF/wd/WD CH1.pdf" target="_blank">Chapter 1 – Introduction to Web Designing</a></li>
+<li><a class="note-link" href="assets/PDF/wd/WD CH2.pdf" target="_blank">Chapter 2 – HTML Basics</a></li>
+<li><a class="note-link" href="assets/PDF/wd/WD CH3.pdf" target="_blank">Chapter 3 – CSS Basics & Styling</a></li>
+<li><a class="note-link" href="assets/PDF/wd/WD CH4.pdf" target="_blank">Chapter 4 – Responsive Web Design & Advanced CSS</a></li>
+<li><a class="note-link" href="assets/PDF/wd/WD CH5.pdf" target="_blank">Chapter 5 – Introduction to Web Deployment</a></li>
+</ul>
+</section>
+
+<section class="tile" id="Physics">
+<h2>Physics (Physics of Semiconductors)</h2>
+<ul>
+<li><a class="note-link" href="assets/PDF/physics/Updated Unit -1 Band  structures and semiconductors.pdf" target="_blank">Unit 1 – Band Structures & Semiconductors</a></li>
+<li><a class="note-link" href="assets/PDF/physics/UNIT 2 Physics.pdf" target="_blank">Unit 2 – Optoelectronics</a></li>
+<li><a class="note-link" href="assets/PDF/physics/Unit3 physics.pdf" target="_blank">Unit 3 – Lasers & Matter–Radiation Interaction</a></li>
+<li><a class="note-link" href="assets/PDF/physics/Unit 4 Low D materials.pdf" target="_blank">Unit 4 – Low Dimensional Materials</a></li>
+</ul>
+</section>
+
+<section class="tile" id="Calculus">
+<h2>Mathematics (Calculus)</h2>
+<ul>
+<li><a class="note-link" href="assets/PDF/calculus/UNIT1 Math.pdf" target="_blank">Unit 1 – Applications of Functions</a></li>
+<li><a class="note-link" href="assets/PDF/calculus/Unit 2 Multivariate Calculus.pdf" target="_blank">Unit 2 – Multivariate Calculus</a></li>
+<li><a class="note-link" href="assets/PDF/calculus/Unit 3 MULTIPLE INTEGRATION.pdf" target="_blank">Unit 3 – Multiple Integration</a></li>
+<li><a class="note-link" href="assets/PDF/calculus/Unit 4.pdf" target="_blank">Unit 4 – Vector Calculus</a></li>
+</ul>
+</section>
+
+<section class="tile" id="PFPS">
+<h2>Programming for Problem Solving (PPS)</h2>
+<ul>
+<li><a class="note-link" href="assets/PDF/pps/PPS CHAPTER1.pdf" target="_blank">Chapter 1 – C Programming</a></li>
+<li><a class="note-link" href="assets/PDF/pps/PPS CHAPTER 2 (2).pdf" target="_blank">Chapter 2 – Data Types</a></li>
+<li><a class="note-link" href="assets/PDF/pps/PPS CHAPTER 3.pdf" target="_blank">Chapter 3 – Operators</a></li>
+<li><a class="note-link" href="assets/PDF/pps/PPS all chapters.pdf.pdf" target="_blank">Chapter 4 – Control Statements</a></li>
+<li><a class="note-link" href="assets/PDF/pps/PPS CHAPTER 5.pdf" target="_blank">Chapter 5 – Arrays & Strings</a></li>
+<li><a class="note-link" href="assets/PDF/pps/PPS CHAPTER 6 (1).pdf" target="_blank">Chapter 6 – Pointers</a></li>
+</ul>
+</section>
+
+<section class="tile" id="FOCS">
+<h2>Fundamentals of Computer Science</h2>
+<ul>
+<li><a class="note-link" href="assets/PDF/focs/5a1c763a-82d2-49c3-8489-7ea608a15410.pptx.pdf" target="_blank">Unit 1 – Computer Architecture</a></li>
+<li><a class="note-link" href="assets/PDF/focs/857e97cc-fa01-44d5-9ee4-b490b89fef87.pptx.pdf" target="_blank">Unit 2 – Number Systems</a></li>
+<li><a class="note-link" href="assets/PDF/focs/9f6866df-e429-4270-afaf-1220fbb90bd4.pptx.pdf" target="_blank">Unit 3 – Problem Solving</a></li>
+<li><a class="note-link" href="assets/PDF/focs/51160be9-da8e-4a0f-89a4-0cc546568ec1.pptx.pdf" target="_blank">Unit 4 – Programming Languages</a></li>
+<li><a class="note-link" href="assets/PDF/focs/3d309807-a768-46c0-9a2b-4855a6571296.pptx.pdf" target="_blank">Unit 5 – Computer Hardware</a></li>
+<li><a class="note-link" href="assets/PDF/focs/d6c9a55c-2044-4f03-a7b2-862e39504eb2.pptx.pdf" target="_blank">Unit 6 – Operating Systems</a></li>
+<li><a class="note-link" href="assets/PDF/focs/2af1c724-7701-4198-8329-890040601bf4.pptx.pdf" target="_blank">Unit 7 – Cyber Security</a></li>
+</ul>
+</section>
+
+</div>
+
+<marquee>As new PDFs arrive, they will be uploaded as soon as possible.</marquee>
+
+</main>
+
+<footer>
+    Built with ❤️ by Daksh Shukla
+</footer>
+
+</body>
+</html>
