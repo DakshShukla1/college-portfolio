@@ -21,7 +21,7 @@ body {
 /* ================= NAVBAR ================= */
 .topnav {
     background: rgba(15, 15, 25, 0.85);
-    padding: 14px 0;
+    padding: 14px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     position: sticky;
     top: 0;
@@ -29,28 +29,8 @@ body {
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.nav-center { text-align: center; }
-
-.topnav a {
-    text-decoration: none;
-    color: #d6d6d6;
-    margin: 0 14px;
-    font-size: 15px;
-    padding: 8px 14px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.topnav a:hover {
-    background: rgba(74,163,255,0.18);
-    color: #4aa3ff;
-    box-shadow: 0 0 12px rgba(74,163,255,0.5);
-}
-
-/* Hamburger + Theme */
 .menu-btn {
     display: none;
     background: none;
@@ -58,15 +38,36 @@ body {
     color: #fff;
     font-size: 26px;
     cursor: pointer;
-    margin-left: 12px;
 }
 
 .theme-btn {
+    margin-left: auto;
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
-    margin-left: 12px;
+}
+
+.nav-center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #d6d6d6;
+    margin: 0 14px;
+    font-size: 15px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.nav-center a:hover {
+    background: rgba(74,163,255,0.18);
+    color: #4aa3ff;
+    box-shadow: 0 0 12px rgba(74,163,255,0.5);
 }
 
 /* ================= HEADER ================= */
@@ -105,7 +106,6 @@ header h1 {
 .subject-nav a:hover {
     background: rgba(74,163,255,0.25);
     color: #4aa3ff;
-    box-shadow: 0 0 12px rgba(74,163,255,0.6);
 }
 
 .sem-nav a.active {
@@ -126,12 +126,6 @@ header h1 {
     );
     border: 1px solid rgba(255,255,255,0.12);
     text-align: center;
-    transition: 0.35s;
-}
-
-.tile:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 40px rgba(0,0,0,0.45);
 }
 
 h2 {
@@ -157,7 +151,6 @@ ul li { margin: 14px 0; }
 .note-link:hover {
     background: rgba(74,163,255,0.35);
     color: white;
-    box-shadow: 0 0 14px rgba(74,163,255,0.7);
 }
 
 marquee { margin: 40px 0; color: #ccc; }
@@ -174,35 +167,40 @@ footer {
     outline-offset: 3px;
 }
 
-/* ================= MOBILE FIX ================= */
+/* ================= MOBILE (LEFT NAV) ================= */
 @media (max-width: 768px) {
 
-    .menu-btn { display: inline-block; }
+    .menu-btn { display: block; }
 
     .nav-center {
-        display: none;
-        width: 100%;
-        text-align: center;
+        position: fixed;
+        top: 0;
+        left: -260px;
+        width: 250px;
+        height: 100vh;
+        background: rgba(10,10,20,0.97);
+        padding-top: 80px;
+        text-align: left;
+        transition: left 0.3s ease;
+        z-index: 2000;
     }
 
-    .nav-center.active { display: block; }
+    .nav-center.active {
+        left: 0;
+    }
 
     .nav-center a {
         display: block;
-        margin: 8px auto;
+        margin: 10px 20px;
     }
 
-    /* 🔥 KEY FIX */
-    .subject-nav {
-        display: none;
-    }
+    .subject-nav { display: none; }
 
     .sem-nav {
         display: flex;
         overflow-x: auto;
-        white-space: nowrap;
-        padding: 10px;
         gap: 10px;
+        padding: 10px;
     }
 
     .sem-nav a {
@@ -225,18 +223,13 @@ body.light .tile {
     color: #111;
     border-color: #ddd;
 }
-
-body.light a { color: #0066cc; }
 </style>
 </head>
 
 <body>
 
 <nav class="topnav">
-<button class="menu-btn"
-    aria-label="Toggle navigation"
-    aria-expanded="false"
-    aria-controls="primary-navigation">☰</button>
+<button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
 
 <div class="nav-center" id="primary-navigation">
     <a href="index.html">Home</a>
@@ -248,7 +241,7 @@ body.light a { color: #0066cc; }
     <a href="https://ums.paruluniversity.ac.in">GNUMS</a>
 </div>
 
-<button class="theme-btn" aria-label="Toggle dark or light mode">🌙</button>
+<button class="theme-btn" aria-label="Toggle theme">🌙</button>
 </nav>
 
 <header><h1>Notes of Subjects</h1></header>
@@ -274,9 +267,6 @@ body.light a { color: #0066cc; }
 
 <main>
 
-<!-- 🔒 ALL YOUR ORIGINAL CONTENT BELOW (UNCHANGED) -->
-
-<!-- SEM 1 -->
 <div id="sem1">
 
 <section class="tile" id="WD">
@@ -348,9 +338,8 @@ const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector(".nav-center");
 
 menuBtn.addEventListener("click", () => {
-    const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-    menuBtn.setAttribute("aria-expanded", !expanded);
-    nav.classList.toggle("active");
+    const open = nav.classList.toggle("active");
+    menuBtn.setAttribute("aria-expanded", open);
 });
 
 const themeBtn = document.querySelector(".theme-btn");
@@ -371,4 +360,3 @@ themeBtn.addEventListener("click", () => {
 
 </body>
 </html>
-
