@@ -18,9 +18,7 @@
             transition: background 0.3s, color 0.3s;
         }
 
-        /* =========================
-           NAVBAR
-           ========================= */
+        /* ================= NAVBAR ================= */
         .topnav {
             background: rgba(15, 15, 25, 0.85);
             padding: 14px 0;
@@ -34,9 +32,7 @@
             justify-content: center;
         }
 
-        .nav-center {
-            text-align: center;
-        }
+        .nav-center { text-align: center; }
 
         .topnav a {
             text-decoration: none;
@@ -55,9 +51,7 @@
             box-shadow: 0 0 12px rgba(74,163,255,0.5);
         }
 
-        /* =========================
-           HAMBURGER + THEME BUTTON
-           ========================= */
+        /* Hamburger + Theme */
         .menu-btn {
             display: none;
             background: none;
@@ -76,9 +70,7 @@
             margin-left: 12px;
         }
 
-        /* =========================
-           HEADINGS
-           ========================= */
+        /* ================= HEADINGS ================= */
         h1 {
             text-align: center;
             margin: 60px 0 10px;
@@ -95,9 +87,7 @@
             padding-left: 12px;
         }
 
-        /* =========================
-           CARD
-           ========================= */
+        /* ================= CARD ================= */
         .card {
             width: 90%;
             max-width: 1100px;
@@ -132,9 +122,7 @@
             border-left: 4px solid #4aa3ff;
         }
 
-        /* =========================
-           TABLE
-           ========================= */
+        /* ================= TABLE ================= */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -169,17 +157,13 @@
             font-size: 14px;
         }
 
-        /* =========================
-           ACCESSIBILITY
-           ========================= */
+        /* ================= ACCESSIBILITY ================= */
         :focus-visible {
             outline: 3px solid #4aa3ff;
             outline-offset: 3px;
         }
 
-        /* =========================
-           MOBILE
-           ========================= */
+        /* ================= MOBILE ================= */
         @media (max-width: 768px) {
             .menu-btn { display: inline-block; }
 
@@ -205,14 +189,10 @@
                 padding: 20px;
             }
 
-            table {
-                font-size: 14px;
-            }
+            table { font-size: 14px; }
         }
 
-        /* =========================
-           LIGHT MODE
-           ========================= */
+        /* ================= LIGHT MODE ================= */
         body.light {
             background: linear-gradient(135deg, #f4f6fb, #ffffff);
             color: #111;
@@ -235,9 +215,9 @@
 
 <nav class="topnav">
     <button class="menu-btn"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-            aria-controls="primary-navigation">☰</button>
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="primary-navigation">☰</button>
 
     <div class="nav-center" id="primary-navigation">
         <a href="index.html">Home</a>
@@ -249,13 +229,10 @@
         <a href="https://ums.paruluniversity.ac.in">GNUMS</a>
     </div>
 
-    <button class="theme-btn"
-            aria-label="Toggle dark or light mode">🌙</button>
+    <button class="theme-btn" aria-label="Toggle dark or light mode">🌙</button>
 </nav>
 
 <h1>Faculty Directory</h1>
-
-<!-- ALL ORIGINAL CONTENT BELOW (UNCHANGED) -->
 
 <section class="card">
     <h2>Department Overview</h2>
@@ -268,12 +245,31 @@
 </section>
 
 <section class="card">
-    <!-- TABLE CONTENT UNCHANGED -->
-    <!-- (Your original table rows remain exactly the same) -->
-    <!-- Kept intentionally untouched -->
-    <!-- Scrollable & mobile safe -->
-    <!-- DO NOT MODIFY -->
-    <!-- ... -->
+<table>
+<thead>
+<tr>
+<th>Subject Code</th>
+<th>Short Name</th>
+<th>Subject</th>
+<th>Initials</th>
+<th>Full Name</th>
+<th>Email</th>
+<th>MIS ID</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>03019101BS01</td><td>Calculus</td><td>Calculus</td><td>AHZ</td><td>Ankitsinh Zala</td><td>ankitsinh.zala21443@paruluniversity.ac.in</td><td>21443</td></tr>
+<tr><td>03010501ES03</td><td>FCS</td><td>Fundamentals of Computer Science</td><td>NS</td><td>Ms. Nidhi Vishal Shah</td><td>nidhi.shah19176@paruluniversity.ac.in</td><td>19176</td></tr>
+<tr><td>03010501PC01 (Lecture)</td><td>WD</td><td>Web Designing</td><td>DT</td><td>Dhaval Trivedi</td><td>dhaval.trivedi37492@paruluniversity.ac.in</td><td>37492</td></tr>
+<tr><td>03010501PC01 (Lab)</td><td>WD Lab</td><td>Web Designing Lab</td><td>SR</td><td>Sheekha Raina</td><td>sheekha.raina41782@paruluniversity.ac.in</td><td>41782</td></tr>
+<tr><td>03019201BS01 (Lecture)</td><td>PHY</td><td>Physics for Semiconductors</td><td>SR</td><td>Dr. Swagata Roy</td><td>swagata.roy31311@paruluniversity.ac.in</td><td>31311</td></tr>
+<tr><td>03019201BS01 (Lab)</td><td>PHY</td><td>Physics Lab</td><td>NP</td><td>Dr. Nikitaben Patel</td><td>nikitaben.patel40891@paruluniversity.ac.in</td><td>40891</td></tr>
+<tr><td>03019201BS01 (Lab)</td><td>PHY</td><td>Physics Lab</td><td>AG</td><td>Aarti Gor</td><td>aarti.gor38345@paruluniversity.ac.in</td><td>38345</td></tr>
+<tr><td>03010501ES01 (Lecture)</td><td>PPS</td><td>Programming For Problem Solving</td><td>BP</td><td>Ms. Bhagyesha Pandhi</td><td>bhagyesha.pandhi24831@paruluniversity.ac.in</td><td>24831</td></tr>
+<tr><td>03010501ES01 (Lab)</td><td>PPS Lab</td><td>Programming For Problem Solving Lab</td><td>RS</td><td>Roshani Solanki</td><td>kush.bhushanwar34618@paruluniversity.ac.in</td><td>41884</td></tr>
+<tr><td>03010001HM01</td><td>PCS</td><td>Principles of Communication Skills</td><td>MC</td><td>Mehul Chauhan</td><td>mehulkumar.chauhan24701@paruluniversity.ac.in</td><td>24701</td></tr>
+</tbody>
+</table>
 </section>
 
 <section class="card">
@@ -290,7 +286,7 @@
 </footer>
 
 <script>
-/* HAMBURGER MENU */
+/* Hamburger */
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector(".nav-center");
 
@@ -300,7 +296,7 @@ menuBtn.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
-/* DARK / LIGHT MODE */
+/* Theme */
 const themeBtn = document.querySelector(".theme-btn");
 const body = document.body;
 
