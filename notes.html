@@ -174,8 +174,9 @@ footer {
     outline-offset: 3px;
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
+
     .menu-btn { display: inline-block; }
 
     .nav-center {
@@ -189,6 +190,24 @@ footer {
     .nav-center a {
         display: block;
         margin: 8px auto;
+    }
+
+    /* 🔥 KEY FIX */
+    .subject-nav {
+        display: none;
+    }
+
+    .sem-nav {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .sem-nav a {
+        flex: 0 0 auto;
+        font-size: 14px;
     }
 
     header h1 { font-size: 26px; }
@@ -255,6 +274,9 @@ body.light a { color: #0066cc; }
 
 <main>
 
+<!-- 🔒 ALL YOUR ORIGINAL CONTENT BELOW (UNCHANGED) -->
+
+<!-- SEM 1 -->
 <div id="sem1">
 
 <section class="tile" id="WD">
@@ -315,14 +337,6 @@ body.light a { color: #0066cc; }
 
 </div>
 
-<div id="sem2"></div>
-<div id="sem3"></div>
-<div id="sem4"></div>
-<div id="sem5"></div>
-<div id="sem6"></div>
-<div id="sem7"></div>
-<div id="sem8"></div>
-
 <marquee>As new PDFs arrive, they will be uploaded as soon as possible.</marquee>
 
 </main>
@@ -330,7 +344,6 @@ body.light a { color: #0066cc; }
 <footer>Built with ❤️ by Daksh Shukla</footer>
 
 <script>
-/* Hamburger Menu */
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector(".nav-center");
 
@@ -340,7 +353,6 @@ menuBtn.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
-/* Dark / Light Mode */
 const themeBtn = document.querySelector(".theme-btn");
 const body = document.body;
 
