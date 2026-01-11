@@ -17,8 +17,6 @@ body {
     line-height: 1.7;
     transition: background 0.3s, color 0.3s;
 }
-
-/* ================= NAVBAR ================= */
 .topnav {
     background: rgba(15, 15, 25, 0.85);
     padding: 14px;
@@ -31,8 +29,6 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-
-/* NAV LINKS */
 .nav-center {
     text-align: center;
 }
@@ -54,7 +50,6 @@ body {
     box-shadow: 0 0 12px rgba(74,163,255,0.5);
 }
 
-/* BUTTONS */
 .menu-btn,
 .theme-btn {
     background: none;
@@ -72,7 +67,6 @@ body {
     font-size: 20px;
 }
 
-/* ================= HERO ================= */
 .hero {
     text-align: center;
     padding: 90px 20px 60px;
@@ -91,7 +85,6 @@ body {
     color: #cfcfcf;
 }
 
-/* ================= CARDS ================= */
 .card {
     width: 85%;
     max-width: 1000px;
@@ -135,14 +128,10 @@ footer {
     color: #aaa;
     font-size: 14px;
 }
-
-/* ================= ACCESSIBILITY ================= */
 :focus-visible {
     outline: 3px solid #4aa3ff;
     outline-offset: 3px;
 }
-
-/* ================= MOBILE (LEFT DRAWER) ================= */
 @media (max-width: 768px) {
 
     .menu-btn {
@@ -180,8 +169,6 @@ footer {
         padding: 20px;
     }
 }
-
-/* ================= LIGHT MODE ================= */
 body.light {
     background: linear-gradient(135deg, #f4f6fb, #ffffff);
     color: #111;
@@ -224,7 +211,6 @@ body.light a { color: #0066cc; }
 <p>B.Tech CSE (AI & ML) Student <br> Developer • Problem Solver • Tech Enthusiast</p>
 </section>
 
-<!-- ALL YOUR CONTENT BELOW IS UNCHANGED -->
 <section class="card"><h2>About Me</h2><p>I’m a Computer Science Engineering student specializing in Artificial Intelligence & Machine Learning. I enjoy building clean, useful applications, dashboards, and automation tools.</p><p>I believe in learning by building projects and improving step by step.</p></section>
 
 <section class="card"><h2>Resume Objective</h2><p>Motivated B.Tech CSE (AI & ML) student seeking internship opportunities to apply programming, problem-solving, and machine learning fundamentals while gaining real-world experience.</p></section>
@@ -246,7 +232,6 @@ body.light a { color: #0066cc; }
 <footer>Built with ❤️ by Daksh Shukla</footer>
 
 <script>
-/* Hamburger */
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector(".nav-center");
 
@@ -256,7 +241,6 @@ menuBtn.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
-/* Theme */
 const themeBtn = document.querySelector(".theme-btn");
 const body = document.body;
 
@@ -275,3 +259,4 @@ themeBtn.addEventListener("click", () => {
 
 </body>
 </html>
+
